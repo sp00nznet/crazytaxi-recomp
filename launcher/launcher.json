@@ -1,0 +1,17 @@
+{
+  "title": "Crazy Taxi",
+  "repo": "sp00nznet/crazytaxi-recomp",
+  "accent": "#f2c200",
+  "note": {
+    "windows": "The build takes about 15 minutes and 2 GB. Python and the Visual Studio Build Tools are installed if they are missing; the Build Tools are about 3 GB and add 15 to 30 minutes, and Windows asks for permission once. It plays with the keyboard: Enter starts, A decides, the arrows drive."
+  },
+  "game": {
+    "name": "Crazy Taxi (PC)",
+    "files": ["CRAZY_TAXI_PC.EXE|crazy_taxi_pc.exe|*taxi*.iso"]
+  },
+  "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "pcrecomp-stp", "dir": "pcrecomp" }],
+  "setup": {
+    "windows": ["cmd", "/c", "Setup.cmd", "-Yes", "-GameDir", "{game}"]
+  },
+  "play": "Crazy Taxi.*"
+}
