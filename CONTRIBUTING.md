@@ -13,7 +13,7 @@ running are fine.
 
 ## Before a pull request
 
-1. Build from a clean lift on pcrecomp's `pcrecomp-stp` branch:
+1. Build from a clean lift on pcrecomp `main`:
    `py -3 run_lift.py --all` (expected: `errors 0`), then `build.cmd`.
 2. There is no conformance harness yet. Run the scripted fare from
    [docs/testing.md](docs/testing.md) and look at the shot: the taxi on its

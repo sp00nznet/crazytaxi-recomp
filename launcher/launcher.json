@@ -9,7 +9,7 @@
     "name": "Crazy Taxi (PC)",
     "files": ["CRAZY_TAXI_PC.EXE|crazy_taxi_pc.exe|*taxi*.iso"]
   },
-  "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "pcrecomp-stp", "dir": "pcrecomp" }],
+  "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "main", "dir": "pcrecomp" }],
   "setup": {
     "windows": ["cmd", "/c", "Setup.cmd", "-Yes", "-GameDir", "{game}"]
   },

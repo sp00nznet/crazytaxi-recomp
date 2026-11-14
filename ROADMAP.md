@@ -1,8 +1,6 @@
 # Roadmap
 
 ## Next
-- Make `pcrecomp-stp`'s lifter (or what of it fixed the taxi) the default
-  toolkit, and find which change it was.
 - A gamepad (only the keyboard is tested).
 - Sound: check DirectSound and the DirectShow music by ear (`--sound`).
 - Pick the frames to keep: the attract demo's frame rate against the original.

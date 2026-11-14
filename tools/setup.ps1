@@ -11,9 +11,7 @@
 #   -GameDir <installed folder, CD drive or folder, .iso or .cue>   skip the question (-Game works too)
 #   -Yes                                                       answer yes to every install question
 #
-# The toolkit is ..\pcrecomp (PCRECOMP overrides it), on pcrecomp's
-# unmerged branch pcrecomp-stp: the lift from main leaves the taxi on its
-# side and frozen a few seconds into a run. Under recomp-launcher
+# The toolkit is ..\pcrecomp (PCRECOMP overrides it), on pcrecomp main. Under recomp-launcher
 # (RECOMP_LAUNCHER=1) it never waits for Enter, and exit code 0 means the
 # shortcut is there.
 param([switch]$Force, [switch]$Yes, [Alias('Game')][string]$GameDir = "")
@@ -24,7 +22,7 @@ $Root = Split-Path -Parent $PSScriptRoot
 $Toolkit = $env:PCRECOMP
 if (-not $Toolkit) { $Toolkit = Join-Path (Split-Path -Parent $Root) 'pcrecomp' }
 $env:PCRECOMP = $Toolkit   # run_lift.py reads it too
-$Branch = 'pcrecomp-stp'
+$Branch = 'main'
 $Log = Join-Path $Root 'setup.log'
 Set-Location $Root
 function Log($t) { Add-Content -Path $Log -Value $t -Encoding UTF8 }
@@ -119,12 +117,12 @@ if (-not (Test-Path (Join-Path $Toolkit 'tools\lift\lift32.py'))) {
 $need = @(
   @('native32 with recomp_eh_resume', 'runtime\native32\eh32.c', 'void recomp_eh_resume'),
   @('the extent walk (generate.py)', 'tools\lift\generate.py', 'EXTENT_REACH'),
-  @("the $Branch branch (native32_registry)", 'runtime\native32\native32.h', 'native32_registry'))
+  @("native32_registry", 'runtime\native32\native32.h', 'native32_registry'))
 function Missing { @($need | Where-Object {
   $f = Join-Path $Toolkit $_[1]
   -not ((Test-Path $f) -and (Select-String -Path $f -Pattern $_[2] -SimpleMatch -Quiet)) } | ForEach-Object { $_[0] }) }
 $missing = Missing
-# A checkout on pcrecomp-stp may move forward; any other branch is someone's work and is left alone.
+# A checkout on main may move forward; any other branch is someone's work and is left alone.
 $head = Join-Path $Toolkit '.git\HEAD'
 if ($missing -and (Test-Path $head) -and (Get-Content $head) -eq "ref: refs/heads/$Branch") {
   if (Ask "  Your pcrecomp is missing $($missing -join ', '). Update it (git pull)?") {

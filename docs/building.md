@@ -9,17 +9,13 @@ the real Direct3D 8, DirectInput 8, DirectSound and DirectShow DLLs
 Windows 10/11, **Python 3.10+** (`py -3 --version`), **git**, **Visual
 Studio 2022** (or its Build Tools) with *Desktop development with C++* (CMake
 and Ninja come with it), and the pcrecomp toolkit cloned **beside** this
-repository as `pcrecomp`, on its **`pcrecomp-stp`** branch:
+repository as `pcrecomp` (`main`):
 
 ```
 some-folder\
-  pcrecomp\            <- git clone -b pcrecomp-stp https://github.com/sp00nznet/pcrecomp
+  pcrecomp\            <- git clone https://github.com/sp00nznet/pcrecomp
   crazytaxi-recomp\    <- this repository
 ```
-
-`pcrecomp-stp` is not merged into pcrecomp `main` yet. A lift from `main`
-boots and plays the attract demo, but a few seconds into a run the taxi ends
-up on its side, wheels off, frozen.
 
 ## Steps
 

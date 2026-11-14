@@ -21,6 +21,7 @@ All notable changes to this project are documented here. The format follows
 - netlab recipe `crazytaxi-recomp`.
 
 ### Changed
+- Builds against pcrecomp main; the `pcrecomp-stp` branch is merged.
 - The CD check runs against a real CD-ROM drive: your disc, or your disc
   image mounted (`CD_DRIVE` names the drive). Setup mounts an `.iso` or
   `.cue`/`.bin` for you.

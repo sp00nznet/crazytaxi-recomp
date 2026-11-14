@@ -7,8 +7,7 @@ DirectInput 8, DirectSound and DirectShow: not an emulator, a wrapper or a
 remake.
 
 Built on the [pcrecomp](https://github.com/sp00nznet/pcrecomp) toolchain, on
-its **`pcrecomp-stp`** branch (not merged into `main` yet; see
-[docs/building.md](docs/building.md) for why it matters).
+its `main` branch.
 
 ![A fare: the customer gets in, bound for the cable car stop](docs/screenshots/fare.png)
 
@@ -29,7 +28,7 @@ image mounted. Windows only for now. There is no installer release yet.
 
 The script checks for Python 3.10+, `capstone`, git and the Visual Studio
 2022 C++ tools and **asks** before installing any of them. It clones pcrecomp
-beside the repo on the `pcrecomp-stp` branch. It finds the game on your
+beside the repo (`main`). It finds the game on your
 drives, in the usual install folders, or as a `*taxi*.iso` or `.cue` beside the repo
 or in Downloads, or asks (`Setup.cmd -GameDir E:\` skips the question, `-Yes`
 answers every install question). Then it catalogs, lifts and builds
@@ -53,7 +52,7 @@ picked up and driven**, with the keyboard.
 | Lift (`run_lift.py --all`) | 8,510 functions, 0 errors, 2.37M lines of C |
 | Boot: CD check, Direct3D 8 device, SEGA logo, title | works |
 | Attract demo (the city in 3D) | works, at about 50 frames a second |
-| Start, menus, an arcade run, a fare | works, on pcrecomp-stp; on pcrecomp `main` the taxi ends up on its side and frozen a few seconds in |
+| Start, menus, an arcade run, a fare | works |
 | Windowed | 640x480 (the default); `--fullscreen` is the original's fullscreen |
 | Sound and music | DirectSound and DirectShow run; not checked by ear |
 | Gamepad | not tested |
