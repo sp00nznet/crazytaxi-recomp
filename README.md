@@ -52,7 +52,7 @@ picked up and driven**, with the keyboard.
 | Lift (`run_lift.py --all`) | 8,510 functions, 0 errors, 2.37M lines of C |
 | Boot: CD check, Direct3D 8 device, SEGA logo, title | works |
 | Attract demo (the city in 3D) | works, at about 50 frames a second |
-| Start, menus, an arcade run, a fare | partly: after a fresh Setup lift, the taxi ends up on its side and frozen a few seconds into a run (open, see ROADMAP) |
+| Start, menus, an arcade run, a fare | works (fresh Setup lift on pcrecomp main eb34f7e or later: the taxi stays upright and picks up a fare) |
 | Windowed | 640x480 (the default); `--fullscreen` is the original's fullscreen |
 | Sound and music | DirectSound and DirectShow run; not checked by ear |
 | Gamepad | not tested |

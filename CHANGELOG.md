@@ -6,6 +6,12 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- The taxi no longer ends up on its side after a fresh lift. pcrecomp main
+  eb34f7e lifts the x87 trig instructions as the CPU runs them (found with
+  `tools/lift/difftest.py --pe`); a fresh Setup lift drives and picks up a fare.
+
 ### Added
 - Scripted keyboard input, `--key S DIK MS`, timed on presented frames, and
   `--shot` on the same clock. A scripted run picks up a fare.

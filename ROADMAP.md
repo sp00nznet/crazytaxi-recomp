@@ -2,9 +2,6 @@
 
 ## Next
 
-- Fix the taxi ending up on its side and frozen a few seconds into a run.
-  It happens after a fresh Setup lift (8,509 functions; the first tested
-  build had 6,712), so it is a lift difference, not the CD change.
 - A gamepad (only the keyboard is tested).
 - Sound: check DirectSound and the DirectShow music by ear (`--sound`).
 - Pick the frames to keep: the attract demo's frame rate against the original.
