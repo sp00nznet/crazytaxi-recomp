@@ -6,6 +6,8 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-20
+
 ### Fixed
 
 - The taxi no longer ends up on its side after a fresh lift. pcrecomp main
